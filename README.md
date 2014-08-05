@@ -8,4 +8,4 @@ could be invoked as `bash <(curl https://raw.githubusercontent.com/eflukx/shell/
 Sorry, but you're on your own if things go bad.
 
 Passwordless sudoing:
-add `%sudo<->ALL=(ALL:ALL) _NOPASSWD:_ ALL` to `/etc/sudoers`
+add `%sudo<->ALL=(ALL:ALL) NOPASSWD: ALL` to `/etc/sudoers`
