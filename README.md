@@ -1,11 +1,18 @@
 shell
 =====
 
-Some shell scripts to get up and running
+Some shell scripts to get things up and running.
+As ususal you'll be on your own if things go bad.
 
 could be invoked as `bash <(curl https://raw.githubusercontent.com/eflukx/shell/master/rbenv_node.sh)`
 
-Sorry, but you're on your own if things go bad.
+(_rbenv_node script doesn't work correctly without user intervention due to env reloads, sorry no time to fix._)
 
-Passwordless sudoing:
+__Passwordless sudoing (Ubuntu):__
+
 add `%sudo<->ALL=(ALL:ALL) NOPASSWD: ALL` to `/etc/sudoers`
+
+__Allowing zeroconf/bonjour/mDNS via iptables:__
+
+    iptables -A INPUT  -p udp --dport 5353 -d 224.0.0.251 -j ACCEPT
+    iptables -A OUTPUT -p udp --dport 5353 -d 224.0.0.251 -j ACCEPT
