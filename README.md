@@ -18,5 +18,6 @@ __Allowing zeroconf/bonjour/mDNS via iptables:__
     iptables -A OUTPUT -p udp --dport 5353 -d 224.0.0.251 -j ACCEPT
     
 __Prompt with git__
+
     PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\e[0;36m\w\e[0;33m$(__git_ps1 " [%s]")\e[0m$ '
 
